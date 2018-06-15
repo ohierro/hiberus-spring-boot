@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8"></meta>
+    <title>Login</title>
+    <style type="text/css">
+
+        #container{
+            width: 50%;
+            height: 100%;
+            position: relative;
+            bottom: 10%;
+            left: 20%;
+            text-align: center;
+            vertical-align: middle;
+            padding: 5%;
+        }
+        #intentos{
+            color: red;
+            text-align: center;
+        }
+        #log{
+            width: 40%;
+        }
+
+    </style>
+</head>
+<body>
+<div id="container">
+    <img id="log" src="images/login.png"></img>
+    <form action="/login" method="POST">
+        <label>Correo Hiberus</label>
+        <input type="text" name="email"/><br/><br/>
+        <label>Contraseña</label>
+        <input type="text" name="passwd"/><br/><br/>
+        <span id="intentos" th:text="${logControl}"></span><br/><br/>
+        <input type="submit" value="Entrar"/>
+    </form>
+</div>
+</body>
+</html>

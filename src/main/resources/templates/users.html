@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>[(#{index.title})]</title>
+</head>
+<body>
+
+    <div th:replace="fragments/navbar :: navbar"></div>
+    <button type="button" class="btn btn-primary">Add user</button>
+    <button type="button" class="btn btn-danger">Delete users</button>
+
+    <table class="table">
+        <thead>
+            <th></th>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>SURNAME</th>
+            <th>EMAIL</th>
+            <th>DEPARTMENT</th>
+        </thead>
+        <tbody>
+            <tr th:each="user : ${users}">
+                <td><input type="checkbox" class="form-check-input" /></td>
+                <td th:text="${user.id_user}"></td>
+                <td th:text="${user.name}"></td>
+                <td th:text="${user.surname}"></td>
+                <td th:text="${user.email}"></td>
+                <td th:text="${user.department}"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div th:replace="fragments/footer :: footer"></div>
+
+    <div th:replace="fragments/footer :: js-imports"></div>
+</body>
+</html>

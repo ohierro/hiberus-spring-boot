@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>[(#{index.title})]</title>
+</head>
+<body>
+    <script>
+        deleteUsers = function() {
+            var n = $( "input:checked" ).length;
+            $( "div" ).text( n + (n === 1 ? " is" : " are") + " checked!" );
+        }
+
+        selectAll = function() {
+
+        }
+    </script>
+
+    <div th:replace="fragments/navbar :: navbar"></div>
+    <a class="btn btn-primary" th:href="@{/users/add }" role="button">Add user</a>
+    <button type="button" class="btn btn-danger" onclick="deleteUsers()">Delete users</button>
+
+    <table class="table">
+        <thead>
+            <th><input type="checkbox" class="form-check-input" /></th>
+            <th>ID</th>
+            <th>NAME</th>
+            <th>DESCRIPTION</th>
+            <th></th>
+        </thead>
+        <tbody>
+            <tr th:each="role : ${roles}">
+                <td><input type="checkbox" class="form-check-input" /></td>
+                <td th:text="${role.id}"></td>
+                <td th:text="${role.name}"></td>
+                <td th:text="${role.description}"></td>
+                <td><a th:href="@{/users/{id}/edit(id=${role.id})}"><i class="far fa-edit"></i></a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div th:replace="fragments/footer :: footer"></div>
+
+    <div th:replace="fragments/footer :: js-imports"></div>
+</body>
+</html>

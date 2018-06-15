@@ -1,0 +1,126 @@
+/* ConfiguraciÃ³n de general */
+* {
+	margin: 0;
+	padding: 0;
+	font-size: 2vw;
+	box-sizing: border-box;
+	font-family: "Arial", sans-serif;
+	background-color: black;
+	color: white;
+	text-decoration: none;
+}
+
+body {
+	width: 100%;
+	height: 100%;
+}
+
+/* Configuración de cabecera */
+#header {
+	float: left;
+	width: 100%;
+}
+
+a {
+	font-size: 1.3vw;
+}
+
+#evaluation {
+	float: left;
+	width: 33.33%;
+	text-align: center;
+	margin-top: 3%;
+}
+
+#evText {
+	font-size: 4vw;
+	color: white;
+	background-color: black;
+}
+
+#perfil {
+	float: left;
+	width: 33.33%;
+}
+
+#logo {
+	float: left;
+	width: 33.33%;
+	text-align: center;
+}
+
+#divPhoto {
+	float: left;
+	width: 30%;
+}
+
+#photographyLogin {
+	width: 100%;
+}
+
+#photographyLogo {
+	width: 65%;
+}
+
+#perfil {
+	float: left;
+}
+
+.datos {
+	float: left;
+	width: 70%;
+}
+
+#logoImg {
+	width: 100%;
+}
+
+h1 {
+	color: black;
+	background-color: white;
+}
+
+#nav {
+	float: left;
+	width: 100%;
+	position: relative;
+	top: 0;
+}
+
+.menu {
+	width: 100%;
+	position: inherit;
+	text-align: center;
+	font-size: 1.3vw;
+}
+
+#container {
+	height: 1000px;
+}
+
+.options {
+	overflow: visible;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+	text-align: center;
+	font-size: 1.3vw;
+	display: none;
+}
+
+/* Configuración de Contenido */
+.contMenu {
+	width: 16.66%;
+	float: left;
+	position: inherit;
+}
+
+#container {
+	position: absolute;
+	top: 26.9%;
+	width: 100%;
+	background-color: white;
+	color: black;
+}
+
+/* Configuración de pie */
